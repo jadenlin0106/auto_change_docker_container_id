@@ -14,11 +14,25 @@ $  docker run -d --name ${1} -it ${2} /bin/bash
 $ ./idrun <new container name> <image name:tag>
 ```
 
-after this command, you will be in the new container's bash.
+after this command, it will create a new container with your host id.
+
+check:
+
+```shell
+$ docker ps
+```
+
+You should see the container that you just create.
 
 
 
-Test in container's bash:
+Check container id in container's bash:
+
+```shell
+$ docker exec -it <container naem> /bin/bash
+```
+
+then
 
 ```shell
 $ id
